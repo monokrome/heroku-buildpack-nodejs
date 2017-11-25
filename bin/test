@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-BUILD_DIR=${1:-}
+cd web
+
+BUILD_DIR=${1:-}/web
 if yarn --version > /dev/null 2>&1; then
   cd "$BUILD_DIR" && yarn test
 else
